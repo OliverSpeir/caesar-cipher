@@ -20,19 +20,15 @@ all_known = known_names + known_words + capital_words + lower_names
 def encrypt(plaintext, key):
     result = ""
 
-    # traverse text
     for i in range(len(plaintext)):
         char = plaintext[i]
 
-        # Encrypt uppercase characters
         if (char.isupper()):
             result += chr((ord(char) + key - 65) % 26 + 65)
 
-        # Encrypt lowercase characters
         elif (char.islower()):
             result += chr((ord(char) + key - 97) % 26 + 97)
 
-        # don't encrypt anything else
         else:
             result += char
     return result
