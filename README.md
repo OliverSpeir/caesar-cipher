@@ -16,6 +16,7 @@ create crack function that brute force tries every possible shift
 ### Setup
 
 - `python caesar_cipher.py`
+- test: `pytest tests/test_caesar.py`
 
 ### Resources
 
